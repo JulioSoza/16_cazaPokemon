@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: #e74c3c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+#catch-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+#catch-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+#catch-btn.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#message {
+    min-height: 30px;
+    font-size: 18px;
+    margin: 15px 0;
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    height: 10px;
+    background-color: #4CAF50;
+    width: 0%;
+    transition: width 0.5s;
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.pokemon-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pokemon-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.pokemon-name {
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.catch-message {
+    color: #27ae60;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
